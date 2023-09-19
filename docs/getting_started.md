@@ -98,6 +98,12 @@ nano .aliases
 nano ~/.aliases
 ```
 
+- `alias ll="ls -lhAF"` - list files in the current directory with more information
+- `alias la="ls -A"` - list all files in the current directory, including hidden ones
+- `alias l="ls -CF"` - list files in the current directory in columns
+- `alias mkcd='fn(){ mkdir -p "$1"; cd "$1" }; fn '` - make a directory and cd into it in one command. Usage: `mkcd [my_new_dir]`
+- `alias reload='source ~/.zshrc'` - reload your zsh config file. Useful if you add new aliases or functions and want to use them without restarting your terminal.
+
 Then add the following line to your `.zshrc` file (also in your home directory) to load the aliases file when you open a new terminal window:
 
 ```bash
@@ -105,12 +111,6 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 ```
-
-- `alias ll="ls -lhAF"` - list files in the current directory with more information
-- `alias la="ls -A"` - list all files in the current directory, including hidden ones
-- `alias l="ls -CF"` - list files in the current directory in columns
-- `alias mkcd='fn(){ mkdir -p "$1"; cd "$1" }; fn '` - make a directory and cd into it in one command. Usage: `mkcd [my_new_dir]`
-- `alias reload='source ~/.zshrc'` - reload your zsh config file. Useful if you add new aliases or functions and want to use them without restarting your terminal.
 
 ### Set up a folder for this minicourse
 [to be continued...]
