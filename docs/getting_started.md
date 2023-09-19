@@ -1,7 +1,3 @@
-# Python for Neuroscience
-
-Learning python for neuroscience without all the extraneous datascience, web development, and other stuff that you don't need to know.
-
 ## Episode 1 - Getting Started
 
 These instructions are for installing Python on a Mac. If you are using Windows it should be similar, but you'll need to read the docs in more detail. Unless you REALLY want windows for some reason, install Ubuntu (you can install it alongside Windows and boot Windows if you ever need it). If you are already using Linux, you probably already know what you are doing...
