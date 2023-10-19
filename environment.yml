@@ -1,0 +1,19 @@
+name: neuro
+dependencies:
+  - python
+  - pip
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - seaborn
+  - statsmodels
+  - notebook
+  - jupyterlab
+  - scikit-learn
+  - scikit-image
+  - h5py
+  - pip:
+   - scanimage-tiff-reader
+   - tifffile
+   - tqdm
