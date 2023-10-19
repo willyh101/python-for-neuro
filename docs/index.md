@@ -6,3 +6,4 @@ Will Hendricks, PhD
 
 ### Lessons
 1. [Getting Started](getting_started.md)
+2. [Python Basics and Notebooks](python_basics.md)

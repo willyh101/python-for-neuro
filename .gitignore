@@ -78,3 +78,10 @@ $RECYCLE.BIN/
 ### Specific to this course ###
 notebooks/*
 !notebooks/src/
+
+# root ignore files
+/hello_world.py
+
+# ignore scripts
+scripts/*
+!scripts/src
