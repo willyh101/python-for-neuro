@@ -4,7 +4,7 @@ These instructions are for installing Python on a Mac. If you are using Windows 
 
 ### Installing Python in 2023
 
-The best way to install Python now is to via a variant of the conda/Anaconda package manager, [mamba](https://mamba.readthedocs.io/en/latest/mamba-installation.html). This is a faster version of conda and helps significantly with installing into complicated environments with a lot of dependencies. Any command you see online that uses `conda` can be replaced with `mamba` and it should work the same, just faster. **The rest of these instructions assume you are using a Mac.** Ubuntu will be very similar except generally you'll just use `apt` instead of `brew` to install things. Windows is pretty different-- talk to me about it.
+The best way to install Python now is to via a variant of the conda/Anaconda package manager, [conda miniforge](https://github.com/conda-forge/miniforge). Miniforge is very similar to Anaconda, but uses more up-to-date and user contributed packages. It also includes mamba now, a faster version of conda and helps significantly with installing into complicated environments with a lot of dependencies. Any command you see online that uses `conda` can be replaced with `mamba` and it should work the same, just faster. **The rest of these instructions assume you are using a Mac.** Ubuntu will be very similar except generally you'll just use `apt` instead of `brew` to install things. Windows is pretty different-- talk to me about it.
 
 Step 0: If you do not have [homebrew](https://brew.sh) installed, install it with the following command in a terminal window:
 
@@ -24,7 +24,7 @@ Homebrew is basically a really easy way to install software on a Mac. It's like 
 Next, install mamba:
 
 ```bash
-brew install --cask mambaforge
+brew install --cask miniforge
 ```
 
 Then run this to setup your shell (aka command line, aka terminal) to use mamba:
@@ -36,7 +36,7 @@ conda init "$(basename "${SHELL}")"
 Then restart your terminal window. This *should* be all you need to get started. Test it!
     
 ```bash
-mamba --version
+conda --version
 ```
 
 Assuming that worked, create an environment for our minicourse. You can create as many environments as you want, and it's good practice to keep them separate. I have one environment for my analysis and keep it seperate from any random things I install. Scientific packages can have a bunch of weird dependencies and you run the risk of downgrading or worse breaking installations of critical packages when you start adding too much stuff in. 
@@ -82,7 +82,7 @@ pip install scanimage-tiff-reader tifffile
 
 ### Helpful aliases
 
-Aliases are like shortcuts for otherwise hard to remember but often used commands. I recommend creating a file called `.aliases` in your home directory and adding the following aliases to it. 
+Aliases are like shortcuts for otherwise hard to remember but often used commands. I recommend creating a file called `.aliases` in your home directory and adding the following aliases to it. Note his only works on Mac and Linux.
 
 ```bash
 cd ~ # this takes you to your home directory (aka /Users/[your_username])
@@ -109,4 +109,8 @@ fi
 ```
 
 ### Set up a folder for this minicourse
-[to be continued...]
+Use git to clone the minicourse repo to your computer. This will create a new folder called `python_for_neuroscience` in your current directory. You can change the directory by adding a path to the end of the command. For example, if you want to clone it to your home directory, you can use `cd ~` to go to your home directory and then run the command below.
+
+```bash
+git clone https://github.com/willyh101/python-for-neuro
+```
